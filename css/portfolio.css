@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #353535;
+  color: #c4c4c4;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sidebar {
+  background: #4f4f4f;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  min-width: 300px;
+  padding: 3em;
+}
+
+.logo {
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 1500px) {
+  .logo {
+    margin-bottom: 5em;
+  }
+}
+
+.logo span {
+  font-weight: 700;
+}
+
+.nav-item {
+  color: #737373;
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: 2em;
+}
+
+@media (min-width: 1500px) {
+  .nav-item {
+    display: block;
+    margin: 7vh 0;
+  }
+}
+
+.nav-item.active {
+  color: #c4c4c4;
+}
+
+.main-content {
+  padding: 10%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 80%;
+          flex: 1 1 80%;
+  min-height: 100vh;
+}
+
+.portforlio {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.portforlio-item {
+  background: #f96855;
+  color: #353535;
+  font-weight: 700;
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.portforlio-item.small {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.portforlio-item.medium {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.portforlio-item.large {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+.portforlio-item.tall {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.portforlio-item.wide {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.two {
+  background-image: url(/static/beach.jpg);
+  background-size: cover;
+  background-color: #353535;
+  background-blend-mode: multiply;
+  background-position: top left;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 10;
+}
+
+.two::before {
+  content: "";
+  display: block;
+  background: #c4c4c4;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.two:hover::before {
+  opacity: 0.2;
+}
+/*# sourceMappingURL=portfolio.css.map */

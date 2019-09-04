@@ -1,0 +1,67 @@
+body{
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
+    grid-template-rows: [hero-start] 50vh [info-start] 5em [hero-end] 5em [info-end] auto [bottom];
+}
+.title{
+    color: white;
+    font-size: 3.5rem;
+    
+    span{
+        font-weight: 300;
+        display: block;
+    }
+}
+
+.small-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.section-one{
+    background: url(/static/beach.jpg);
+    background-color: #777;
+    background-blend-mode: multiply;
+    background-size: cover;
+    text-align: center;
+    
+    // align center and middle
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Frame the grid to the top of the page
+    grid-column: page-start / page-end; // {1} {2}: #1: start_column #2: end_column
+    grid-row: hero-start / hero-end;
+}
+.section-two{
+    background: #DDD;
+    text-align: center;
+
+    // align center and middle
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    // Frame the grid to the middle of the page
+    grid-column: content-start / content-end;
+    grid-row: info-start / info-end;
+    z-index: 10;
+}
+.section-three{
+    background: lightblue;
+    grid-column: page-start / page-end;
+    grid-row: hero-end / bottom;
+    padding: 150px 0;
+
+    // Inherit the grind from the body
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.container{
+    background: pink;
+    grid-column: content-start / content-end;
+}
